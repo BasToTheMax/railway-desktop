@@ -11,7 +11,7 @@ WORKDIR $HOME
 
 RUN touch $HOME/Desktop/hello.txt
 RUN cat /etc/kasmvnc/kasmvnc.yaml
-RUN echo -e "network:\n  ssl:\n    require_ssl: false" > ~/.vnc/kasmvnc.yaml
+RUN echo -e 'network:\n  ssl:\n    require_ssl: false' > ~/.vnc/kasmvnc.yaml
 
 
 ######### End Customizations ###########
