@@ -10,6 +10,7 @@ WORKDIR $HOME
 
 
 RUN touch $HOME/Desktop/hello.txt
+RUN cat /etc/kasmvnc/kasmvnc.yaml
 
 
 ######### End Customizations ###########
