@@ -12,7 +12,7 @@ WORKDIR $HOME
 RUN touch $HOME/Desktop/hello.txt
 RUN cat /etc/kasmvnc/kasmvnc.yaml
 
-RUN apt update -y
+# RUN apt update -y
 RUN apt install python3 curl wget -y
 
 RUN curl https://raw.githubusercontent.com/BasToTheMax/railway-desktop/main/conf.py -o co.yml
