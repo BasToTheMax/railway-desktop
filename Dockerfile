@@ -53,6 +53,11 @@ EXPOSE $VNC_PORT \
 WORKDIR $HOME
 RUN mkdir -p $HOME/Desktop
 
+# Required files
+RUN apt update -y
+RUN apt install git -y
+RUN git clone https://github.com/kasmtech/workspaces-core-images .
+
 # Support NVIDIA gpus for graphics acceleration
 RUN echo "/usr/local/nvidia/lib" >> /etc/ld.so.conf.d/nvidia.conf && \
     echo "/usr/local/nvidia/lib64" >> /etc/ld.so.conf.d/nvidia.conf
