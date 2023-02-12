@@ -56,9 +56,9 @@ RUN mkdir -p $HOME/Desktop
 # Required files
 RUN apt update -y
 RUN apt install git -y
-RUN git clone https://github.com/kasmtech/workspaces-core-images .
-RUN git clone https://github.com/kasmtech/workspaces-core-images $INST_SCRIPTS
-RUN pwd
+RUN git clone https://github.com/kasmtech/workspaces-core-images.git .
+RUN git clone https://github.com/kasmtech/workspaces-core-images.git $INST_SCRIPTS
+RUN echo $(pwd)
 
 # Support NVIDIA gpus for graphics acceleration
 RUN echo "/usr/local/nvidia/lib" >> /etc/ld.so.conf.d/nvidia.conf && \
