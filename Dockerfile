@@ -180,5 +180,7 @@ RUN touch $STARTUPDIR/wm.log \
 
 USER 1000
 
+RUN echo $(pwd)
+
 ENTRYPOINT ["/dockerstartup/kasm_default_profile.sh", "/dockerstartup/vnc_startup.sh", "/dockerstartup/kasm_startup.sh"]
 CMD ["--wait"]
