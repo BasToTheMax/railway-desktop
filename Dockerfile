@@ -28,7 +28,7 @@ RUN mkdir /home/$USER/.vnc && \
     chown -R $USER:$USER /home/$USER/.vnc
  
 # start script
-COPY ./start.sh /home/$USER/.vnc/xstartup
+COPY start.sh /home/$USER/.vnc/xstartup
 
 # port
 EXPOSE 5901
