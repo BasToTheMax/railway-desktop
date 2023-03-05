@@ -3,7 +3,6 @@ FROM ubuntu:latest
 # Updates
 RUN apt update -y
 RUN apt upgrade -y
-RUN apt install novnc -y
 
 # No input
 ENV DEBIAN_FRONTEND noninteractive
@@ -12,6 +11,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt install xfce4 -y
 RUN apt install xfce4-goodies -y
 RUN apt install tightvncserver -y
+RUN apt install novnc -y
 
 # user
 ARG USER=testuser
