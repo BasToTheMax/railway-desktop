@@ -37,4 +37,4 @@ EXPOSE 5901
 USER testuser
 
 # start
-CMD echo hi && whoami && vncserver
+CMD echo hi && whoami && USER=testuser vncserver
