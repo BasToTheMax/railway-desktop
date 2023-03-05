@@ -34,4 +34,4 @@ COPY start.sh /home/$USER/.vnc/xstartup
 EXPOSE 5901
 
 # start
-CMD echo hi && whoami && bash
+CMD echo hi && whoami && vncserver
