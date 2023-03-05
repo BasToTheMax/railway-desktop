@@ -13,6 +13,7 @@ RUN apt install xfce4-goodies -y
 RUN apt install tightvncserver -y
 RUN apt install novnc websockify -y
 RUN apt install curl sudo wget net-tools git -y
+RUN apt install python3 python3-pip -y
 
 # user
 ARG USER=testuser
