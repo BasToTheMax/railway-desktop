@@ -3,6 +3,7 @@ FROM ubuntu:latest
 # Updates
 RUN apt update -y
 RUN apt upgrade -y
+RUN apt install novnc -y
 
 # No input
 ENV DEBIAN_FRONTEND noninteractive
@@ -37,4 +38,4 @@ EXPOSE 5901
 USER testuser
 
 # start
-CMD echo hi && whoami && USER=testuser vncserver && echo done
+CMD echo hi && whoami && USER=testuser vncserver && echo done && novnc --listen 6901 --vnc localhost:5901
