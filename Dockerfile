@@ -51,4 +51,4 @@ WORKDIR /home/$USER
 USER testuser
 
 # start
-CMD echo hi && cat /home/testuser/.vnc/xstartup && USER=testuser vncserver && echo done && /.novnc/utils/launch.sh --listen 6901 --vnc localhost:5901
+CMD echo hi && cat /home/testuser/.vnc/xstartup && USER=testuser vncserver -depth 24 -geometry 1280x800 && echo done && /.novnc/utils/launch.sh --listen 6901 --vnc localhost:5901
