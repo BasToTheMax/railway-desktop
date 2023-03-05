@@ -16,6 +16,7 @@ RUN apt install curl sudo wget net-tools git -y
 RUN apt install python3 python3-pip -y
 
 RUN cp /usr/bin/python3 /usr/bin/python
+RUN pip install websocket
 
 # user
 ARG USER=testuser
@@ -40,8 +41,8 @@ EXPOSE 5901
 
 WORKDIR /.novnc
 RUN wget -qO- https://github.com/novnc/noVNC/archive/v1.0.0.tar.gz | tar xz --strip 1 -C $PWD
-RUN mkdir /.novnc/utils/websockify
-RUN wget -qO- https://github.com/novnc/websockify/archive/v0.6.1.tar.gz | tar xz --strip 1 -C /.novnc/utils/websockify
+# RUN mkdir /.novnc/utils/websockify
+# RUN wget -qO- https://github.com/novnc/websockify/archive/v0.6.1.tar.gz | tar xz --strip 1 -C /.novnc/utils/websockify
 RUN ln -s vnc.html index.html
 
 WORKDIR /home/$USER
