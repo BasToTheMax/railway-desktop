@@ -11,7 +11,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt install xfce4 -y
 RUN apt install xfce4-goodies -y
 RUN apt install tightvncserver -y
-RUN apt install novnc -y
+RUN apt install novnc websockify -y
 RUN apt install curl sudo wget net-tools git -y
 
 # user
