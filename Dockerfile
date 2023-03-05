@@ -12,4 +12,4 @@ RUN apt install xfce4 -y
 RUN apt install xfce4-goodies -y
 RUN apt install tightvncserver -y
 
-CMD echo hi && bash
+CMD echo hi && whoami && bash
