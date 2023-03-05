@@ -33,5 +33,8 @@ COPY start.sh /home/$USER/.vnc/xstartup
 # port
 EXPOSE 5901
 
+# user
+USER testuser
+
 # start
 CMD echo hi && whoami && vncserver
