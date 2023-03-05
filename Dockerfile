@@ -46,4 +46,4 @@ WORKDIR /home/$USER
 USER testuser
 
 # start
-CMD echo hi && whoami && USER=testuser vncserver && echo done && novnc --listen 6901 --vnc localhost:5901
+CMD echo hi && whoami && USER=testuser vncserver && echo done && /.novnc/utils/launch.sh --listen 6901 --vnc localhost:5901
